@@ -196,7 +196,7 @@ if (NOT ENABLE_SSL STREQUAL OFF)
 endif ()
 
 if (OPENSSL_FOUND)
-   if (WIN32 AND OPENSSL_VERSION GREATER 1.1 AND NOT
+   if (WIN32 AND OPENSSL_VERSION VERSION_GREATER 1.1 AND NOT
          ${CMAKE_VERSION} VERSION_GREATER_EQUAL 3.7)
       message (FATAL_ERROR "Building against OpenSSL 1.1.0 and later requires CMake 3.7 or later (hint:"
          " You can also compile against Windows Secure Transport with -DENABLE_SSL=WINDOWS)"
